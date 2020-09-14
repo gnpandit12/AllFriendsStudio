@@ -6,10 +6,10 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.allfriendsstudio.model.FriendsService;
-import com.example.allfriendsstudio.model.dataClass.ResponseData;
 import com.example.allfriendsstudio.model.di.ApiComponent;
 import com.example.allfriendsstudio.model.di.ApiModule;
 import com.example.allfriendsstudio.model.di.DaggerApiComponent;
+import com.example.allfriendsstudio.model.pojoClass.ResponseData;
 
 import javax.inject.Inject;
 

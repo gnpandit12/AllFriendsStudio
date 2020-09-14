@@ -1,9 +1,10 @@
 package com.example.allfriendsstudio.model;
 
-import com.example.allfriendsstudio.model.dataClass.ResponseData;
+
 import com.example.allfriendsstudio.model.di.ApiComponent;
 import com.example.allfriendsstudio.model.di.ApiModule;
 import com.example.allfriendsstudio.model.di.DaggerApiComponent;
+import com.example.allfriendsstudio.model.pojoClass.ResponseData;
 
 import javax.inject.Inject;
 

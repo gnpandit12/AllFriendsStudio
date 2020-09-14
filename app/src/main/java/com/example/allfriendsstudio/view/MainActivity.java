@@ -23,8 +23,7 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.example.allfriendsstudio.R;
 import com.example.allfriendsstudio.databinding.ActivityMainBinding;
-import com.example.allfriendsstudio.model.dataClass.ResponseData;
-import com.example.allfriendsstudio.model.dataClass.UserProfileData;
+import com.example.allfriendsstudio.model.pojoClass.UserProfile;
 import com.example.allfriendsstudio.viewModel.MainActivityViewModel;
 
 import java.util.List;
@@ -39,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             firstNameTV, lastNameTV;
     private CircleImageView profilePicImageView;
     private MainActivityViewModel mainActivityViewModel;
-    private List<UserProfileData> userProfileDataList;
+    private List<UserProfile> userProfileDataList;
     private Button friendsListButton;
 
 
@@ -71,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (responseData != null) {
                         Log.d(TAG, "Successful!");
                         userProfileDataList = responseData.getUserProfile();
-                        UserProfileData userProfileData = userProfileDataList.get(0);
+                        UserProfile userProfileData = userProfileDataList.get(0);
 
                         if (userProfileData.getUserName() != null) {
                             userNameTV.setText(userProfileData.getUserName());

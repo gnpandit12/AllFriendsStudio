@@ -18,7 +18,8 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.example.allfriendsstudio.R;
-import com.example.allfriendsstudio.model.dataClass.FriendsData;
+
+import com.example.allfriendsstudio.model.pojoClass.Friend;
 
 import java.util.List;
 
@@ -28,9 +29,9 @@ public class FriendsListAdapter extends RecyclerView.Adapter<FriendsListAdapter.
 
     public static final String TAG = "adapter";
     private Context mContext;
-    private List<FriendsData> mFriendsDataList;
+    private List<Friend> mFriendsDataList;
 
-    public FriendsListAdapter(Context context, List<FriendsData> friendsDataList) {
+    public FriendsListAdapter(Context context, List<Friend> friendsDataList) {
         this.mContext = context;
         this.mFriendsDataList = friendsDataList;
         Log.d(TAG, "FriendsListAdapter: ");
@@ -47,7 +48,7 @@ public class FriendsListAdapter extends RecyclerView.Adapter<FriendsListAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull FriendsListViewHolder holder, int position) {
-        FriendsData friendsData = mFriendsDataList.get(position);
+        Friend friendsData = mFriendsDataList.get(position);
 
         if (friendsData.getFname() != null) {
             holder.firstNameTV.setText(friendsData.getFname().toString());

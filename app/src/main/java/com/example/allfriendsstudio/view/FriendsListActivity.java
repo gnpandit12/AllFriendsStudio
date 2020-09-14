@@ -15,8 +15,6 @@ import android.widget.ProgressBar;
 import com.example.allfriendsstudio.R;
 import com.example.allfriendsstudio.databinding.ActivityFriendsListBinding;
 import com.example.allfriendsstudio.model.adapter.FriendsListAdapter;
-import com.example.allfriendsstudio.model.dataClass.FriendsData;
-import com.example.allfriendsstudio.model.dataClass.ResponseData;
 import com.example.allfriendsstudio.viewModel.FriendsListViewModel;
 
 import java.util.List;

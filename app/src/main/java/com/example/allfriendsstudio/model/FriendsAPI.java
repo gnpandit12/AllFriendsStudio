@@ -1,6 +1,7 @@
 package com.example.allfriendsstudio.model;
 
-import com.example.allfriendsstudio.model.dataClass.ResponseData;
+
+import com.example.allfriendsstudio.model.pojoClass.ResponseData;
 
 import io.reactivex.Single;
 import retrofit2.http.GET;
