@@ -55,9 +55,6 @@ public class FriendsListAdapter extends RecyclerView.Adapter<FriendsListAdapter.
         if (friendsData.getLname() != null) {
             holder.lastNameTV.setText(friendsData.getLname().toString());
         }
-        if (friendsData.getUserBio() != null) {
-            holder.bioTV.setText(friendsData.getUserBio().toString());
-        }
         if (friendsData.getUserName() != null) {
             holder.userNameTV.setText(friendsData.getUserName());
         }
@@ -97,7 +94,7 @@ public class FriendsListAdapter extends RecyclerView.Adapter<FriendsListAdapter.
 
     public static class FriendsListViewHolder extends RecyclerView.ViewHolder {
 
-        TextView firstNameTV, lastNameTV, lastSeenTV, contactNoTV, emailTV, userNameTV, bioTV;
+        TextView firstNameTV, lastNameTV, lastSeenTV, contactNoTV, emailTV, userNameTV;
         CircleImageView userProfileImageView;
 
         public FriendsListViewHolder(@NonNull View itemView) {
@@ -109,7 +106,6 @@ public class FriendsListAdapter extends RecyclerView.Adapter<FriendsListAdapter.
             contactNoTV = itemView.findViewById(R.id.user_contact_text_view);
             emailTV = itemView.findViewById(R.id.user_email_text_view);
             userNameTV = itemView.findViewById(R.id.user_name_text_view);
-            bioTV = itemView.findViewById(R.id.user_bio_text_view);
             userProfileImageView = itemView.findViewById(R.id.user_profile_image);
         }
 

@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ProgressBar;
 
 import com.example.allfriendsstudio.R;
@@ -29,6 +30,7 @@ public class FriendsListActivity extends AppCompatActivity {
     private RecyclerView friendsListRecyclerView;
     private FriendsListAdapter friendsListAdapter;
     private ProgressBar loadingProgressBar;
+    private EditText searchUserNameEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class FriendsListActivity extends AppCompatActivity {
         friendsListBinding = DataBindingUtil.setContentView(this, R.layout.activity_friends_list);
         friendsListRecyclerView = friendsListBinding.friendsListRecyclerView;
         loadingProgressBar = friendsListBinding.loadingProgressBar;
+        searchUserNameEditText = friendsListBinding.searchUsernameEditText;
         loadingProgressBar.setVisibility(View.GONE);
         friendsListRecyclerView.setHasFixedSize(true);
         friendsListViewModel = ViewModelProviders.of(this).get(FriendsListViewModel.class);
